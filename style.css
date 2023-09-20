@@ -1,0 +1,225 @@
+﻿@charset "utf-8";
+body {    
+             background: url("../images/bg.jpg") no-repeat center;
+             background-attachment: fixed;
+             background-size: cover;}
+/*본문에서 버튼이 공통인 스타일*/
+.btn{
+                width:160px;
+                height:40px;
+                text-align:center;
+                line-height:40px;
+                margin:0 auto;
+                border:1px solid #ffffff;
+                color:#ffffff;}
+.btn:hover{background-color:#ffffff;color:#242424;}
+
+/*videobg*/
+.v-header{/*v-header안에 콘텐츠를 원하는 좌표로 배치하기 위한
+부모구조의 포지션 지정*/
+                    position:relative;
+                    width:100%;
+                    height:100%;
+                    overflow:hidden;/*정해진 사이즈에 콘텐츠가 넘치지 않게 하기 위한 스타일*/}
+.v-header .fullscreen-video{z-index:9;/*포지션사용시 컨텐츠배치 순번.값이 높을수록 위에 배치가 됨.*/}
+.v-header .fullscreen-video video{
+/*
+이미지와 웹구조시 사용되는 단위.
+min-width  = max-width
+min-height = max-height
+min-width:100% 비디오 사이즈의 최소넓이는 100%로 지정함.
+화면사이즈가 해상도가 변해도 100사이즈를 유지할수 있도록 해준 경우
+*/
+                    min-width:100%;
+                    width:auto;
+                    min-height:100%;
+                    height:auto;}
+
+/*position:absolute가 공통인 구조*/
+.v-header .fullscreen-video,
+.v-header .overlay-bg, 
+.v-header .video-title{
+                                    position:absolute;
+                                    top:0;
+                                    left:0;
+                                    width:100%;
+                                    height:100%;}
+
+.v-header .overlay-bg{
+                 z-index:99;/*비디오보다 순번을 높게 지정*/
+                 background-color:rgba(0,0,0,0.75);
+                 background-image:url("../images/main_career-bg.png");}
+.v-header .video-title{/*비디오배경>배경색과패턴>타이틀*/
+                                    height:auto;
+                                    z-index:999;
+                                    text-align:center;
+                                    color:#ffffff;
+                                    top:50%;
+                                    -webkit-transform:translateY(-50%);
+                                    -moz-transform:translateY(-50%);
+                                    -o-transform:translateY(-50%);
+                                    transform:translateY(-50%);}
+.v-header .video-title h1{
+                                        font-size:42px;
+                                        margin-bottom:20px;
+                                        font-weight:100;}
+.v-header .video-title p{margin-bottom:40px;}
+/*container*/
+.container{}
+/*container안에서 화면에 고정넓이 중앙정렬 구조*/
+.about-wrap, .team-wrap, .news, .video{
+                                                                    width:1010px;
+                                                                    margin:0 auto;}
+.about{background-color:#ffffff;}
+.about .about-wrap{padding:60px 0;}
+.about .about-wrap .ab-txt{float:left; width:590px;}
+.about .about-wrap .ab-txt h2{
+                                                    font-size:36px;
+                                                    margin-bottom:40px;
+                                                    font-weight:100;}
+.about .about-wrap .ab-txt h2 span{display:block;}
+.about .about-wrap .ab-txt h2 span.an{margin:14px 0;}
+.about .about-wrap .ab-txt p{font-size:14px;color:#808080;}
+.about .about-wrap .ab-bg{
+                                            float:right;
+                                            width:380px;
+                                            height:300px;
+                                            position:relative;}
+.about .about-wrap .ab-bg img{position:absolute;}
+.about .about-wrap .ab-bg .car{bottom:20px;}
+.about .about-wrap .ab-bg .robot{bottom:0;right:0;}
+.team-bg{padding:60px 0;}
+.team-bg .team-wrap{
+                                    text-align:center;
+                                    color:#ffffff;}
+.team-bg .team-wrap h2{font-size:36px;
+                                       font-weight:100;
+                                       line-height:40px;
+                                       margin-bottom:20px;}
+.team-bg .team-wrap p{margin-bottom:40px;}
+.team-bg .team-wrap a{text-transform:uppercase;}
+.news-wrap{background-color:#e9e9e9;padding:60px 0;}
+.news-wrap h3{
+                                text-align:center;
+                                font-size:28px;
+                                margin-bottom:60px;}
+.news-wrap .news{margin-bottom:60px;}
+.news-wrap > a{
+                                    border-color:#242424;
+                                    text-transform:uppercase;
+                                    color:#242424;}
+.news-wrap > a:hover{background-color:#242424;color:#ffffff;}
+.news-wrap .news li{
+                                        float:left;
+                                        width:320px;
+                                        margin-right:25px;}
+.news-wrap .news li:last-child{margin-right:0;}
+.news-wrap .news li img{width:100%;
+                        -webkit-transition:0.5s ease;
+                        -moz-transition:0.5s ease;
+                        -o-transition:0.5s ease;
+                        transition:0.5s ease;
+                        -webkit-transform:scale(1);
+                        -moz-transform:scale(1);
+                        -o-transform:scale(1);
+                        transform:scale(1);}
+.news-wrap .news li a .bg{
+                                            height:180px;
+                                            overflow:hidden;
+                                            margin-bottom:20px;}
+.news-wrap .news li:nth-child(2) a .bg{background-color:#ffffff;}
+.news-wrap .news li a .bg-txt{padding:0 16px 16px;}
+.news-wrap .news li a .bg-txt h4{margin-bottom:8px;}
+.news-wrap .news li a .bg-txt > span{font-size:12px;color:#a9a9a9;}
+.news-wrap .news li a .bg-txt p{
+                                                    padding-top:20px;
+                                                    font-size:14px;
+                                                    color:#808080;}
+/*li전체 이벤트 효과만들기*/
+.news-wrap .news li a{position:relative;}
+.news-wrap .news li a::before{
+                                content:"";
+                                position:absolute;
+                                top:-1px;
+                                left:-1px;
+                                border:3px solid rgba(0,0,0,0);
+                                width:100%;
+                                height:100%;
+                                box-sizing:border-box;
+                                z-index:99;
+                                -webkit-transition:0.5s ease;
+                                -moz-transition:0.5s ease;
+                                -o-transition:0.5s ease;
+                                transition:0.5s ease;}
+.news-wrap .news li a:hover::before{
+                                content:"";
+                                border:3px solid #00b7e0;
+                                box-shadow:20px 20px 40px rgba(0,0,0,0.2);}
+.news-wrap .news li a:hover img{
+                                -webkit-transform:scale(1.1);
+                                -moz-transform:scale(1.1);
+                                -o-transform:scale(1.1);
+                                transform:scale(1.1);}
+.video-wrap{background-color:#ffffff;padding:60px 0;}
+.video-wrap h3{text-align:center;font-size:28px;margin-bottom:60px;}
+.video-wrap .video{margin-bottom:60px;}
+.video-wrap .video li{float:left;width:320px;margin-right:25px;}
+.video-wrap .video li:last-child{margin-right:0;}
+.video-wrap .video li img{width:100%;}
+.video-wrap .video li .v-bg{
+                                            overflow:hidden;
+                                            margin-bottom:20px;
+                                            position:relative;}
+
+/*이벤트 전 효과만들어놓기 공통인 부분*/
+.video-wrap .video li .v-bg img,
+.video-wrap .video li .v-bg .overlay,
+.video-wrap .video li .v-bg span,
+.video-wrap .video li .v-bg-txt p{
+                                                    -webkit-transition:0.5s ease;
+                                                    -moz-transition:0.5s ease;
+                                                    -o-transition:0.5s ease;
+                                                    transition:0.5s ease;}
+
+.video-wrap .video li .v-bg img{filter:blur(0px);}
+.video-wrap .video li .v-bg .overlay{
+                                                    position:absolute;
+                                                    width:100%;
+                                                    height:100%;
+                                                    background-color:#000000;
+                                                    opacity:0;
+                                                    top:0;
+                                                    left:0;
+                                                    z-index:1;}
+.video-wrap .video li .v-bg span{
+                               position:absolute;
+                               color:#ffffff;
+                               font-size:30px;
+                               opacity:0;
+                               top:50%;
+                               left:50%;
+                               z-index:11;
+                               -webkit-transform:translate(-50%,-50%);        
+                               -moz-transform:translate(-50%,-50%);   
+                               -o-transform:translate(-50%,-50%);   
+                               transform:translate(-50%,-50%);}
+.video-wrap .video li .v-bg-txt{}
+.video-wrap .video li .v-bg-txt p{
+                               width:320px;
+                               white-space:nowrap;/*줄바꿈처리부분*/
+                               overflow:hidden;
+/*https://www.w3schools.com/css/css3_text_effects.asp
+text-overflow:ellipsis;*/
+                               text-overflow:ellipsis;/*줄임표(...)*/
+                               margin-bottom:10px;}
+.video-wrap .video li .v-bg-txt > span{font-size:12px;color:#a9a9a9;}
+/*이벤트시 화면 스타일*/
+.video-wrap .video li a:hover .v-bg img{filter:blur(5px);}
+.video-wrap .video li a:hover .v-bg .overlay{opacity:0.75;}
+.video-wrap .video li a:hover .v-bg span{opacity:1;}
+.video-wrap .video li a:hover .v-bg-txt p{color:#00b7e0;}
+.video-wrap > a{
+                                    border-color:#242424;
+                                    text-transform:uppercase;
+                                    color:#242424;}
+.video-wrap > a:hover{background-color:#242424;color:#ffffff;}

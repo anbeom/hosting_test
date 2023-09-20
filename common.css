@@ -1,0 +1,103 @@
+﻿@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+html,body{height:100%;}
+/*본문전체폰트*/
+body{
+                font-family: 'Noto Sans KR', sans-serif;
+                font-style:normal;
+                font-weight:normal;
+                font-size:16px;
+                color:#303030;
+                letter-spacing:1px;
+                line-height:22px;}
+/*부분영문폰트적용*/
+.eng{font-family: 'Montserrat', sans-serif;}
+ul li{margin:0; padding:0;}
+a{
+            color:#303030;
+            -webkit-transition:0.5s ease;
+            -moz-transition:0.5s ease;
+            -o-transition:0.5s ease;
+            transition:0.5s ease;}
+/*본문float해제*/
+.clearfix::after{content:"";display:block;clear:both;}
+/*전체넓이 공통의 클래스명*/
+.rows{width:100%;}
+/*top-main*/
+.top-main{
+                    width:1010px;/*화면고정넓이*/
+                    position:absolute;
+                    top:50px;
+                    left:50%;/*수평만 가운데정렬시키기 위한 좌표*/
+                    z-index:99999;/*포지션시 위치 순번*/
+                    /*수평만 가운데정렬시키기 위한 좌표*/
+                    -webkit-transform:translateX(-50%);
+                    -moz-transform:translateX(-50%);
+                    -o-transform:translateX(-50%);
+                    transform:translateX(-50%);}
+.top-main .top{}
+.top-main .top .logo{
+                                float:left;
+                                width:170px;}
+/*.logo img{width:100%}유동넓이를 적용해야 하는 이유는
+   .logo의 공간이 고정넓이기 때문에 img 사이즈가 고정사이
+    즈라면 해당 칸 안에 이미지 배치가 안됨.*/
+.top-main .top .logo img{width:100%;}
+.top-main .top .nav{float:right;}
+.top-main .top .nav li{
+                                    display:inline-block;
+                                    height:24px;
+                                    line-height:24px;
+                                    text-align:center;}
+.top-main .top .nav li a{
+/*li높이가 지정되었기 때문에 a의 padding값은 수평만 적용
+  만 적용할수 있도록 함.*/
+                                    color:#ffffff;
+                                    text-transform:uppercase;
+                                    padding:0 8px;}
+.top-main .top .nav li.line a{border:1px solid #ffffff;}
+.top-main .top .nav li a:hover{
+                                    background-color:#ffffff;
+                                    color:#303030;}
+/*footer*/
+.footer{background-color:#303030;padding:50px 0;}
+.footer a{font-size:14px;color:#808080;}
+.footer .admin{width:1010px;margin:0 auto;}
+.admin .sns{float:left;}
+.admin .admin-infor{float:right;}
+/*footer li공통인 부분*/
+.admin ul li{display:inline-block;margin-right:8px;}
+.admin .sns li a:hover{color:#ffffff;}
+.admin .admin-infor li.v-line{font-size:10px;color:#808080;}
+.admin .admin-infor li a:hover{color:#ffffff;text-decoration:underline;}
+.admin .admin-infor li.form select{
+                                                        border:0;
+                                                        outline:none;
+                                                        box-sizing:border-box;
+                                                        background-color:#1a1a1a;
+                                                        font-size:13px;
+                                                        color:#c4c4c4;
+                                                        padding:3px;/*공간확장*/}
+/*iframe style*/
+.content{width:900px;margin:0 auto;padding-top:30px;}
+.content .iframe-box{}
+.content .iframe-box .i-txt{
+                                            width:620px;
+                                            margin-right:40px;
+                                            float:left;}
+.content .iframe-box .i-txt h3{
+                                                font-size:24px;
+                                                font-weight:100;
+                                                margin-bottom:20px;}
+.content .iframe-box .i-txt p{font-size:16px;
+                                            color:#808080;
+                                            margin-bottom:10px;}
+.content .iframe-box .i-txt .day{font-size:12px;color:#c4c4c4;}
+.content .iframe-box .i-txt .tag{}
+    .content .iframe-box .i-txt .tag a {
+        font-size: 14px;
+        padding: 0 5px;
+        display: inline-block;}                                                                                            
+.content .iframe-box .pic{width:240px;float:right;}
+.content .iframe-box img{padding-top:48px;max-width:240px;}

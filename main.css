@@ -1,0 +1,51 @@
+﻿@charset "utf-8";
+ .headertop{
+    border-bottom:1px solid #282828;
+    padding:40px 0;
+    margin-bottom:40px;
+    width:100%;
+    position: static;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);}
+.top-main .top{width:1010px; margin:0 auto;}
+.top-main .top .nav li a{color:#282828;}
+.top-main .top .nav li.line a{border-color:#282828;}
+.top-main .top .nav li a:hover{background-color:#282828; color:#ffffff;}
+
+.section{width:1010px; margin:0 auto 80px;}
+.section img{width:100%;}
+.slogan{padding-bottom:80px; border-bottom:1px solid #cccccc; margin-bottom:80px;}
+.slogan .left-outer{width:680px; float:left;}
+.slogan .left-outer li{width:325px; float:left; margin-right:30px; margin-bottom:30px;}
+.slogan .left-outer li:nth-child(even){margin-right:0;}
+.slogan .left-outer li:nth-child(3),
+.slogan .left-outer li:nth-child(4){margin-bottom:0;}
+.slogan .left-outer li.bg-box{}
+.slogan .left-outer li.bg-txt{}
+.slogan .left-outer li.bg-txt .inner-box{}
+.slogan .left-outer li.bg-txt .inner-box h3{font-size:20px;}
+.slogan .left-outer li.bg-txt .inner-box h3 span{display:block; font-size:16px; margin-bottom:6px;}
+.slogan .left-outer li.bg-txt .inner-box hr{margin:0; border:0; width:60px; border-top:2px solid #282828;
+                                            margin:16px 0;}
+.slogan .left-outer li.bg-txt .inner-box p{margin-bottom:20px;}
+.slogan .left-outer li.bg-txt .inner-box a{font-size:14px; color:#808080;}
+.slogan .right-outer{width:260px; float:right;}
+.slogan .right-outer .w-img{position:relative;}
+.slogan .right-outer .w-img .btn-group{position:absolute; right:0; bottom:0; font-size:0;}
+.slogan .right-outer .w-img .btn-group a{width:50px; height:50px; background-color:#e2e2e2;
+                                         text-align:center; line-height:50px; display:inline-block; font-size:20px;}
+.slogan .right-outer .img-txt{position:relative; height:156px;}
+.slogan .right-outer .img-txt .icon{font-size:60px; opacity:0.1;}
+.slogan .right-outer .img-txt p{position:absolute; top:30px; left:20px;}
+.slogan .right-outer .img-txt .name{position:absolute; bottom:0; left:20px; font-size:14px; color:#808080;}
+.frame-box{width:1010px; margin:0 auto;}
+.frame-box h4{font-size:20px;}
+.frame-box .frame{width:inherit; text-align:center; margin-bottom:40px; border-bottom:1px solid #cccccc;}
+.frame-box .frame-btn{text-align:center;}
+.frame-box .frame-btn a{display:inline-block; width:40px; height:40px; background-color:#cccccc;
+                        text-align:center; line-height:40px; font-size:18px;}
+.frame-box .frame-btn a:hover{background-color:#282828; color:#ffffff;}
